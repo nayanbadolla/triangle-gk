@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon_io/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <title>nbadolla | trikon</title>
+</head>
+<body>
+    <h1>trikon</h1>
+    <h2>know your triangles</h2>
+
+    <header>
+        <a href="#isTri" id="isTriangleLink" class="links">is it</a>
+        <a href="#quiz" id="quizLink" class="links">quiz</a>
+        <a href="#hypo" id="hypotenuseLink" class="links">hypotenuse</a>
+        <a href="#area" id="triangleAreaLink" class="links">area</a>
+    </header>
+
+    <div id="isTriangle">
+        <h1>angle of triangles</h1>
+        <br>
+        <label>angle 1:
+            <input type="number" id="angle1" class="angle">
+        </label>
+        <br>
+        <label>angle 2:
+            <input type="number" id="angle2" class="angle">
+        </label>
+        <br>
+        <label>angle 3:
+            <input type="number" id="angle3" class="angle">
+        </label>
+        <br>
+        <button id="isTriangleSubmit">Submit</button>
+    </div>
+
+    <div id="quiz">
+        <h1>triangle quiz</h1>
+        <h2>correct answer carries 1 point</h2>
+
+        <form>
+            <h3>What is the third angle for the triangle where angle1 = 45° and angle2 = 45°?</h3>
+            <label>
+                <input type="radio" name="one" value="45°">45&deg;
+            </label>
+            <label>
+                <input type="radio" name="one" value="90°">90&deg;
+            </label>
+            <label>
+                <input type="radio" name="one" value="60°">60&deg;
+            </label>
+
+            <h3>What is the third angle for the triangle where angle1 = 45° and angle2 = 45°?</h3>
+            <label>
+                <input type="radio" name="two" value="obtuse">obtuse
+            </label>
+            <label>
+                <input type="radio" name="two" value="acute">acute
+            </label>
+            <label>
+                <input type="radio" name="two" value="right-angled">right-angled
+            </label>
+
+            <h3>A triangle can have</h3>
+            <label>
+                <input type="radio" name="three" value="one">one right angle
+            </label>
+            <label>
+                <input type="radio" name="three" value="two">two right angle
+            </label>
+
+            <h3>Which of the following triangles are always similar?</h3>
+            <label>
+                <input type="radio" name="four" value="equilateral">equilateral
+            </label>
+            <label>
+                <input type="radio" name="four" value="isoceles">isoceles
+            </label>
+
+            <h3>If one angle of a triangle is obtuse, then which one of the following is the possible measure of remaining angles?</h3>
+            <label>
+                <input type="radio" name="five" value="100°">100&deg;
+            </label>
+            <label>
+                <input type="radio" name="five" value="85°">85&deg;
+            </label>
+
+            <h3>If the largest angle in a triangle is 70°, what is the least possible value of the smallest angle of the triangle?</h3>
+            <label>
+                <input type="radio" name="six" value="30°">30&deg;
+            </label>
+            <label>
+                <input type="radio" name="six" value="10°">10&deg;
+            </label>
+
+            <h3>The perimeter of scalene triangle with sides a, b, c is</h3>
+            <label>
+                <input type="radio" name="seven" value="a+b+c">a+b+c
+            </label>
+            <label>
+                <input type="radio" name="seven" value="2a">2a
+            </label>
+            <label>
+                <input type="radio" name="seven" value="none">none
+            </label>
+
+            <h3>There is a right triangle PQR where: angle Q = 90°; angle P = angle R. What is the measure of angles P and R?</h3>
+            <label>
+                <input type="radio" name="eight" value="85°">85&deg;
+            </label>
+            <label>
+                <input type="radio" name="eight" value="65°">65&deg;
+            </label>
+            <label>
+                <input type="radio" name="eight" value="45°">45&deg;
+            </label>
+            <br><br>
+            <button id="quizSubmit">Submit</button>
+        </form>
+    </div>
+    
+    <div id="hypotenuse">
+        <h1>hypotenuse of triangle</h1>
+        <h3>enter base value:</h3>
+        <input type="number" name="baseInput" class="hypotenuse" id="baseInput">
+
+        <h3>enter height value:</h3>
+        <input type="number" class="hypotenuse" id="heightInput">
+        <br>
+        <button id="hypotenuseSubmit">calculate</button>
+    </div>
+    
+    <div id="triangleArea">
+        <h1>area of triangle</h1>
+        <h3>side 1:</h3>
+        <input type="number" name="side1" class="side" id="side1">
+        <br>
+        <h3>side 2:</h3>
+        <input type="number" name="side2" class="side" id="side2">
+        <br>
+        <h3>side 3:</h3>
+        <input type="number" name="side3" class="side" id="side3">
+        <br>
+        <button id="triangleAreaSubmit">Submit</button>
+    </div>
+
+    <div class="output"></div>
+    <h3 class="formula"></h3>
+
+    <footer>
+        <h1>nbadolla</h1>
+
+        <!-- <a href="mailto:badollanayan@gmail.com" class="mail"><i class="fas fa-solid fa-envelope"></i> badollanayan@gmail.com</a>
+        <br><br> -->
+
+        <a href="https://twitter.com/NBadolla" target="_blank" class="links"><i class="fab fa-brands fa-twitter fa-2x"></i></a>
+
+        <a href="https://github.com/nayanbadolla" target="_blank" class="links"><i class="fab fa-brands fa-github fa-2x"></i></a>
+
+        <a href="https://linkedin.com/in/nayan-badolla-043187182" target="_blank" class="links"><i class="fab fa-brands fa-linkedin fa-2x"></i></a>
+
+        <!-- <a href="https://www.instagram.com/mindofillusions/?hl=en" target="_blank" class="links">Instagram</a> -->
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

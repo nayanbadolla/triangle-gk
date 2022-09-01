@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    margin: 0;
+}
+
+body {
+    background-color: #FF4895;
+    color: white;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+}
+
+h1 {
+    padding: 0.5em;
+}
+
+h2 {
+    padding-bottom: 1em;
+}
+
+header {
+    padding: 1em;
+    background-color: #ec0766;
+    font-size: larger;
+}
+
+header .links {
+    margin: 4em;
+}  
+
+.links {
+    margin: 0.5em;
+    color: white;
+    text-decoration: none;
+}
+
+header .links:hover {
+    border-bottom: 3px solid white;
+    font-weight: bolder;
+}
+
+#isTriangle, #quiz, #hypotenuse, #triangleArea, .output, .formula {
+    display: none;
+    background-color: white;
+    color: black;
+}
+
+input, button {
+    padding: 0.5em;
+    border: 2px solid black;
+    border-radius: 0.5em;
+    font-size: medium;
+}
+
+input {
+    margin-bottom: 1em;
+}
+
+button {
+    margin-bottom: 2em;
+    background-color: #ec0766;
+    color: white;
+}
+
+label {
+    font-size: 20px;
+}
+
+h3 {
+    padding: 0.5em;
+}
+
+.formula {
+    padding-bottom: 2em;
+}
+
+footer {
+    margin: 1em;
+}
