@@ -104,6 +104,7 @@ isTriangleSubmit.addEventListener('click', function() {
 })
 
 // Quiz
+
 // var one=document.querySelectorAll('#one')
 // quizSubmit.addEventListener('click', function() {
 //     if (one[2].checked) {
@@ -128,7 +129,7 @@ function calculate(e) {
     var score=0, index=0
     
     output.style.display='block'
-    formula.style.display='block'
+    // formula.style.display='none'
 
     var formResults=new FormData(quizForm)
     for (let value of formResults.values()) {
@@ -138,6 +139,7 @@ function calculate(e) {
         index=index+1
     }
     output.innerHTML=`<h3>you attempted ${index} out of 8 <br> you have scored ${score} </h3>`
+    // formula.innerHTML=""
 }
 
 quizSubmit.addEventListener('click', calculate)
@@ -151,7 +153,7 @@ var hypotenuse
 
 hypotenuseSubmit.addEventListener('click', function() {
     output.style.display='block'
-    formula.style.display='block'
+    formula.style.display='none'
 
     if (baseInput.value=='' || heightInput.value=='' ) {
         errorMessage()
@@ -194,7 +196,7 @@ side3.addEventListener('input', function(e) {
 
 triangleAreaSubmit.addEventListener('click', function() {
     output.style.display='block'
-    formula.style.display='block'
+    formula.style.display='none'
 
     if (firstSide==undefined || secondSide==undefined || thirdSide==undefined) {
         errorMessage()
@@ -222,15 +224,13 @@ triangleAreaSubmit.addEventListener('click', function() {
             var scaleneFormula=semiPerimeter*(semiPerimeter-firstSide)*(semiPerimeter-secondSide)*(semiPerimeter-thirdSide)
             area=Math.sqrt(scaleneFormula)
             area=area.toFixed(2)
-            
         }
-    
+        
         if (area==0) {
             output.innerHTML=`<h3>not a valid triangle</h3>`
         }
         else {
             output.innerHTML=`<h3>area of triangle = ${area} sq. units</h3>`
-            // formula.innerHTML=`<h3></h3>`
         }
     }
 })
@@ -238,4 +238,5 @@ triangleAreaSubmit.addEventListener('click', function() {
 var findAreaIsoceles=function(a, b) {
     area=(1/4)*b*Math.sqrt((4*Math.pow(a,2))-Math.pow(b,2))
     area=area.toFixed(2)
+    return area
 }
