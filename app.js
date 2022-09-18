@@ -21,7 +21,7 @@ const output=document.querySelector('.output')
 const formula=document.querySelector('.formula')
 
 isTriangleLink.addEventListener('click', function() {
-    isTriangleDiv.style.display='block'
+    isTriangleDiv.style.display='flex'
     quizDiv.style.display='none'
     hypotenuseDiv.style.display='none'
     triangleAreaDiv.style.display='none'
@@ -41,7 +41,7 @@ quizLink.addEventListener('click', function() {
 hypotenuseLink.addEventListener('click', function() {
     isTriangleDiv.style.display='none'
     quizDiv.style.display='none'
-    hypotenuseDiv.style.display='block'
+    hypotenuseDiv.style.display='flex'
     triangleAreaDiv.style.display='none'
     output.style.display='none'
     formula.style.display='none'
@@ -51,13 +51,13 @@ triangleAreaLink.addEventListener('click', function() {
     isTriangleDiv.style.display='none'
     quizDiv.style.display='none'
     hypotenuseDiv.style.display='none'
-    triangleAreaDiv.style.display='block'
+    triangleAreaDiv.style.display='flex'
     output.style.display='none'
     formula.style.display='none'
 })
 
 function errorMessage() {
-    output.innerHTML="kindly enter all fields"
+    output.innerHTML="<h3>kindly enter all fields</h3>"
 }
 
 // isTriangle
@@ -195,48 +195,44 @@ side3.addEventListener('input', function(e) {
 // thirdSide=Number(side[2].value)
 
 triangleAreaSubmit.addEventListener('click', function() {
+    function invalidTriangle() {
+        output.innerHTML="<h3>not a valid triangle <br> area = 0 <br> sum of two sides to be greater than third side</h3>"
+    }
     output.style.display='block'
     formula.style.display='none'
-
+    
     if (firstSide==undefined || secondSide==undefined || thirdSide==undefined) {
         errorMessage()
     }
+    else if (Number.isNaN(firstSide) || Number.isNaN(secondSide) || Number.isNaN(thirdSide)) {
+        errorMessage()
+    }
+    else if (firstSide<=0 || secondSide<=0 || thirdSide<=0) {
+        output.innerHTML="<h3>triangle has three sides <br> invalid triangle if any side less than or equal to 0</h3>"
+    }
     else {
         if (firstSide===secondSide && firstSide===thirdSide) {
-            area=(Math.sqrt(3)/4)*Math.pow(firstSide,2)
+            area=((Math.sqrt(3))/4)*Math.pow(firstSide,2)
             area=area.toFixed(2)
         }
-        
-        else if (firstSide===secondSide || firstSide===thirdSide || secondSide===thirdSide) {
-            if (firstSide===secondSide) {
-                area=findAreaIsoceles(firstSide, secondSide)
-            }
-            else if (firstSide===thirdSide) {
-                area=findAreaIsoceles(firstSide, thirdSide)
-            }
-            else {
-                area=findAreaIsoceles(secondSide, thirdSide)
-            }
-        }
-    
         else {
             var semiPerimeter=(firstSide+secondSide+thirdSide)/2
             var scaleneFormula=semiPerimeter*(semiPerimeter-firstSide)*(semiPerimeter-secondSide)*(semiPerimeter-thirdSide)
-            area=Math.sqrt(scaleneFormula)
-            area=area.toFixed(2)
+            console.log(scaleneFormula)
+            if (scaleneFormula>0) {
+                area=Math.sqrt(scaleneFormula)
+                area=area.toFixed(2)
+            }
+            else {
+                invalidTriangle()
+            }
         }
         
-        if (area==0) {
-            output.innerHTML=`<h3>not a valid triangle</h3>`
+        if (area==0 || area==undefined) {
+            invalidTriangle()
         }
         else {
             output.innerHTML=`<h3>area of triangle = ${area} sq. units</h3>`
         }
     }
 })
-
-var findAreaIsoceles=function(a, b) {
-    area=(1/4)*b*Math.sqrt((4*Math.pow(a,2))-Math.pow(b,2))
-    area=area.toFixed(2)
-    return area
-}

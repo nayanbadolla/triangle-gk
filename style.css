@@ -48,6 +48,15 @@ header .links:hover {
     color: black;
 }
 
+.flex {
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.img {
+    padding: 2em;
+}
+
 input, button {
     padding: 0.5em;
     border: 2px solid black;
@@ -78,5 +87,18 @@ h3 {
 }
 
 footer {
-    margin: 1em;
+    margin: 2em;
+}
+
+.code a {
+    color: white;
+    background-color: #ec0766;
+    /* border: 2px solid black; */
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.code a:hover {
+    text-decoration: underline;
 }

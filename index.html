@@ -20,22 +20,27 @@
         <a href="#area" id="triangleAreaLink" class="links">area</a>
     </header>
 
-    <div id="isTriangle">
-        <h1>angle of triangles</h1>
-        <br>
-        <label>angle 1:
-            <input type="number" id="angle1" class="angle">
-        </label>
-        <br>
-        <label>angle 2:
-            <input type="number" id="angle2" class="angle">
-        </label>
-        <br>
-        <label>angle 3:
-            <input type="number" id="angle3" class="angle">
-        </label>
-        <br>
-        <button id="isTriangleSubmit">Submit</button>
+    <img src="./img/triangles.svg" alt="types" class="img">
+
+    <div id="isTriangle" class="flex">
+        <img src="./img/angle.png" alt="angle">
+        <div>
+            <h1>angle of triangles</h1>
+            <br>
+            <label>angle 1:
+                <input type="number" id="angle1" class="angle">
+            </label>
+            <br>
+            <label>angle 2:
+                <input type="number" id="angle2" class="angle">
+            </label>
+            <br>
+            <label>angle 3:
+                <input type="number" id="angle3" class="angle">
+            </label>
+            <br>
+            <button id="isTriangleSubmit">Submit</button>
+        </div>
     </div>
 
     <div id="quiz">
@@ -123,35 +128,45 @@
         </form>
     </div>
     
-    <div id="hypotenuse">
-        <h1>hypotenuse of triangle</h1>
-        <h3>enter base value:</h3>
-        <input type="number" name="baseInput" class="hypotenuse" id="baseInput">
-
-        <h3>enter height value:</h3>
-        <input type="number" class="hypotenuse" id="heightInput">
-        <br>
-        <button id="hypotenuseSubmit">calculate</button>
+    <div id="hypotenuse" class="flex">
+        <img src="./img/hypotenuse.png" alt="hypotenuse">
+        <div>
+            <h1>hypotenuse of triangle</h1>
+            <h3>enter base value:</h3>
+            <input type="number" name="baseInput" class="hypotenuse" id="baseInput">
+    
+            <h3>enter height value:</h3>
+            <input type="number" class="hypotenuse" id="heightInput">
+            <br>
+            <button id="hypotenuseSubmit">calculate</button>
+        </div>
     </div>
     
-    <div id="triangleArea">
-        <h1>area of triangle</h1>
-        <h3>side 1:</h3>
-        <input type="number" name="side1" class="side" id="side1">
-        <br>
-        <h3>side 2:</h3>
-        <input type="number" name="side2" class="side" id="side2">
-        <br>
-        <h3>side 3:</h3>
-        <input type="number" name="side3" class="side" id="side3">
-        <br>
-        <button id="triangleAreaSubmit">Submit</button>
+    <div id="triangleArea" class="flex">
+        <img src="./img/area-equi.png" alt="equi">
+        <div>
+            <h1>area of triangle</h1>
+            <h3>side 1:</h3>
+            <input type="number" name="side1" class="side" id="side1">
+            <br>
+            <h3>side 2:</h3>
+            <input type="number" name="side2" class="side" id="side2">
+            <br>
+            <h3>side 3:</h3>
+            <input type="number" name="side3" class="side" id="side3">
+            <br>
+            <button id="triangleAreaSubmit">Submit</button>
+        </div>
+        <img src="./img/area-iso_scal.png" alt="iso_scal">
     </div>
 
     <div class="output"></div>
     <h3 class="formula"></h3>
 
     <footer>
+        <div class="code">
+            <a href="https://github.com/nayanbadolla/palindrome-birthday">Source Code</a>
+        </div>
         <h1>nbadolla</h1>
 
         <!-- <a href="mailto:badollanayan@gmail.com" class="mail"><i class="fas fa-solid fa-envelope"></i> badollanayan@gmail.com</a>
