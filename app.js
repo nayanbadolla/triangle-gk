@@ -90,15 +90,16 @@ isTriangleSubmit.addEventListener('click', function() {
     if (firstAngle==undefined || secondAngle==undefined || thirdAngle==undefined) {
         errorMessage()
     }
+    else if (firstAngle<=0 || secondAngle<=0 || thirdAngle<=0) {
+        output.innerHTML="triangle cannot be formed if any angle is 0 or less than that <br> sum of angles of a triangle is always equal to 180"
+    }
     else {
         angleSum=firstAngle+secondAngle+thirdAngle
         if (angleSum===180) {
             output.innerHTML=`<h3>triangle can be formed...sum of angle is ${angleSum}</h3>`
-            formula.innerHTML=""
         }
         else {
-            output.innerHTML=`<h3>triangle cannot be formed...sum of angle is ${angleSum}</h3>`
-            formula.innerHTML="sum of angles of a triangle is always equal to 180"
+            output.innerHTML=`<h3>triangle cannot be formed...sum of angle is ${angleSum} <br> sum of angles of a triangle is always equal to 180</h3>`
         }
     }
 })
@@ -155,8 +156,11 @@ hypotenuseSubmit.addEventListener('click', function() {
     output.style.display='block'
     formula.style.display='none'
 
-    if (baseInput.value=='' || heightInput.value=='' ) {
+    if (baseInput.value=='' || heightInput.value=='') {
         errorMessage()
+    }
+    else if (baseInput.value<=0|| heightInput.value<=0) {
+        output.innerHTML="<h3>hypotenuse not possible <br> zero or negative value not accepted</h3>"
     }
     else {
         var base=Number(hypotenuseInput[0].value)
