@@ -53,7 +53,7 @@ header .links:hover {
     align-items: center;
 }
 
-.img {
+.triangle {
     padding: 2em;
 }
 
@@ -101,4 +101,18 @@ footer {
 
 .code a:hover {
     text-decoration: underline;
+}
+
+@media only screen and (max-width:768px) {
+    .triangle {
+        width: 100%;
+    }
+
+    .flex {
+        flex-direction: column;
+    }
+
+    .img  {
+        width: 60%;
+    }
 }
